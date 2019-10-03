@@ -1,8 +1,15 @@
 /*
- * IS4010 Fal 2019
+ * IS4010 001 Fall 2019
  * Assignment 05
- * Bill Nicholson
- * nicholdw@ucmail.uc.edu
+ * Christa Preston
+ * prestoca@ucmail.uc.edu
+ * 
+ * Description: A method translateScore that takes a football score and
+returns a string describing that score without altering pre-written main or header of method.
+ * 
+ * Citations:
+ * Prof Nicholson Lecture
+ * Big Java Late Objects pg 218-222
  */
 package footballFun;
 
@@ -25,7 +32,22 @@ public class FootballFun {
 			System.out.println("At least one test failed");
 		}
 	}
+	/**
+	 * A method that takes an integer(points scored) and returns a string(type of play)
+	 * @param score   number of points scored(integer)
+	 * @return type of play scored
+	 * @author Christa_Preston
+	 */
 	public static String translateScore (int score) {
+		if(score == 2) {return "safety";}
+		if (score == 3){return "field goal";}
+		if (score == 6) {return "touchdown";}
+		if (score == 7){ return "touchdown and extra point";}
+		if (score == 8) {return "touchdown and 2-point conversion";}
+		if (score == -1){return "";}
+		if (score == 1){return "invalid";}
+		if (score == 10){return "you must be playing Quidditch ";}
+
 		return "";
 	}
 }
